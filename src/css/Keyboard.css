@@ -1,0 +1,141 @@
+/* Estilos generales */
+.section__keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.keyboard__container {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.keyboard__header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.keyboard__controls{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: max-content;
+  margin-inline: auto;
+}
+
+.keyboard__keys {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.keys__container{
+  min-width: 280px;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.key{
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.3s ease;
+}
+
+.key__content{
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Teclas blancas */
+.key__white {
+  flex: 1;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  & span:first-child {
+    color: #aaa;
+    font-weight: 300;
+  }
+
+  & span:last-child {
+    color: #000;
+    font-weight: 700;
+  }
+}
+
+.key__white:hover {
+  background-color: #ccc;
+}
+
+/* Teclas negras */
+.key__black {
+  position: absolute;
+  width: 7%;
+  height: 60%;
+  background-color: #000;
+  border-radius: 3px;
+  top: 0;
+  z-index: 1;
+  left: calc(100% / 7 * var(--black-key-position) - 4%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  & span:first-child {
+    color: #444;
+    font-weight: 300;
+  }
+
+  & span:last-child {
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+.key__black:hover {
+  background-color: #333;
+}
+
+/* Ajuste de posiciones específicas */
+.key__black:nth-child(2) {
+  --black-key-position: 1;
+}
+
+.key__black:nth-child(4) {
+  --black-key-position: 2;
+}
+
+.key__black:nth-child(7) {
+  --black-key-position: 4;
+}
+
+.key__black:nth-child(9) {
+  --black-key-position: 5;
+}
+
+.key__black:nth-child(11) {
+  --black-key-position: 6;
+}

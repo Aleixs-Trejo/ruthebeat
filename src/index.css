@@ -1,0 +1,132 @@
+/*********** ROOT ***********/
+:root{
+  --color-bg-primary: #11111b;
+  --color-text-primary: #fff;
+  --color-text-secondary: #cdd6f4;
+  --color-text-tertiary: #7f849c;
+
+  --color-bg-hover: #1e1e2e;
+}
+
+/***************** RESET *****************/
+html{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-bg-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+  font-weight: 400;
+}
+
+button,
+input{
+  background-color: transparent;
+  border: thin solid var(--color-text-secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 300ms ease;
+  display: block;
+  color: var(--color-text-primary);
+  font-size: 0.915rem;
+}
+
+button:hover {
+  background-color: var(--color-bg-hover);
+}
+
+a{
+  text-decoration: none;
+  transition: 300ms ease;
+  display: inline-block;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+figure{
+  user-select: none;
+  flex-shrink: 0;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+img, video, iframe{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+svg{
+  display: block;
+}
+
+li{
+  list-style: none;
+}
+
+p{
+  text-wrap: pretty;
+  font-size: 0.912rem;
+}
+
+span,
+p,
+label,
+pre{
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+
+select,
+option{
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+/***************** UTILITIES *****************/
+.container{
+  width: 90%;
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+.flex-c-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
